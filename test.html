@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8">
+</head>
+<body id="home">
+<header class="sticky">
+
+    <div class="row">
+        <div class="logo" href="#"></div>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tree.html">Family Tree</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div> <!-- / row -->
+
+</header>
+
+<div id="container">
+  <h1>DuBuis Family Reunions</h1>
+
+  <section class="sec01">
+    <p>Ugh wolf Carles narwhal twee flexitarian. Organic Marfa kogi whatever kale chips heirloom. Kitsch Bushwick mixtape, viral taxidermy vinyl gastropub Intelligentsia tofu Pinterest kogi. Keffiyeh bitters farm-to-table chambray. Jean shorts pork belly vinyl organic, bicycle rights polaroid vegan. Organic PBR meggings, stumptown chia sriracha bespoke pork belly craft beer gluten-free trust fund Intelligentsia. Slow-carb vegan tilde pickled Brooklyn mumblecore, ugh pug deep v dreamcatcher chambray Odd Future Carles 90's.</p>
+
+<p>Chambray PBR&B Kickstarter, you probably haven't heard of them ennui mustache meh typewriter asymmetrical sriracha pour-over semiotics wolf umami viral. Tattooed kogi art party, pug iPhone chambray Portland sriracha chia plaid locavore mumblecore cardigan. Direct trade Pinterest Brooklyn keytar kitsch shabby chic, flexitarian cliche ennui Thundercats listicle Vice trust fund. Farm-to-table viral Odd Future mustache heirloom flannel. Cred try-hard leggings, meditation Pinterest you probably haven't heard of them keffiyeh Marfa actually. Irony YOLO salvia fashion axe mixtape, pug XOXO kogi Kickstarter church-key heirloom cronut. Sartorial Austin craft beer cornhole, Thundercats stumptown Vice selfies pickled sriracha.</p>
+
+<p>VHS Tumblr XOXO, craft beer Etsy whatever American Apparel fanny pack Intelligentsia viral forage. Kale chips chia salvia XOXO. Meggings four dollar toast pop-up stumptown kale chips. Vegan Shoreditch selfies messenger bag Godard sartorial, 8-bit McSweeney's distillery paleo Neutra. Bespoke brunch High Life chambray master cleanse PBR, Echo Park Bushwick biodiesel deep v. Dreamcatcher Williamsburg leggings fashion axe. Synth church-key readymade Banksy, jean shorts cray paleo you probably haven't heard of them.</p>
+
+<p>+1 beard mumblecore, chia DIY health goth lomo vegan. Umami cred Austin, farm-to-table 8-bit skateboard paleo YOLO hella pour-over literally next level brunch banjo messenger bag. Pork belly lomo photo booth, next level ugh wolf High Life hella banh mi cornhole. Four dollar toast +1 Kickstarter sriracha. Flexitarian artisan vegan selfies, wayfarers Marfa asymmetrical crucifix fashion axe Pinterest biodiesel pour-over four dollar toast migas. Normcore cardigan heirloom seitan. Pinterest PBR&B iPhone keffiyeh flannel roof party Etsy, fap selvage.</p>
+  </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+// Mobile Navigation
+$('.mobile-toggle').click(function() {
+    if ($('header').hasClass('open-nav')) {
+        $('header').removeClass('open-nav');
+    } else {
+        $('header').addClass('open-nav');
+    }
+});
+
+$('header li a').click(function() {
+    if ($('header').hasClass('open-nav')) {
+        $('.navigation').removeClass('open-nav');
+        $('header').removeClass('open-nav');
+    }
+});
+
+// navigation scroll lijepo radi materem
+$('nav a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 150;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({
+        scrollTop: target
+    }, 500);
+    event.preventDefault();
+});
+</script>
+</body>
+</html>
